@@ -1,0 +1,83 @@
+{
+  "toxicity_on_handwritten_test": {
+    "comments": 40,
+    "accuracy": 0.95,
+    "f1": 0.9524,
+    "accuracy_model_only_no_lexicon": 0.925,
+    "missed": [],
+    "false_alarms": [
+      "The new footpath is good but the drain cover is missing in two places.",
+      "The train was 90 minutes late and there was no announcement."
+    ]
+  },
+  "mode": "offline",
+  "components": {
+    "LLM": "offline (no LLM)",
+    "Toxicity": "local TF-IDF + LR + lexicon",
+    "Embeddings": "TF-IDF character cosine",
+    "Guidelines RAG": "TF-IDF index"
+  },
+  "reviewer_on_600_pairs": {
+    "verdict_accuracy": 0.9717,
+    "catch_rate_bad_rewrites": 0.997,
+    "false_alarm_rate_good_rewrites": 0.0,
+    "accuracy_by_rewrite_type": {
+      "good": 1.0,
+      "invented_fact": 1.0,
+      "meaning_lost": 0.8636,
+      "sarcastic": 1.0,
+      "stance_flipped": 0.8788,
+      "still_toxic": 1.0
+    },
+    "confusion_matrix": {
+      "labels": [
+        "Accept",
+        "Revise",
+        "Reject"
+      ],
+      "matrix": [
+        [
+          270,
+          0,
+          0
+        ],
+        [
+          0,
+          189,
+          9
+        ],
+        [
+          1,
+          7,
+          124
+        ]
+      ]
+    },
+    "verdict_counts": {
+      "Accept": 271,
+      "Revise": 196,
+      "Reject": 133
+    }
+  },
+  "batch_review_input_100": {
+    "rows": 100,
+    "verdict_counts": {
+      "Accept": 64,
+      "Revise": 23,
+      "Reject": 13
+    },
+    "verdict_accuracy_on_labelled_rows": 0.9867,
+    "labelled_rows": 75,
+    "avg_toxicity_before": 0.8468,
+    "avg_toxicity_after": 0.2572,
+    "avg_meaning_preserved": 0.8424
+  },
+  "rewriter_on_toxic_comments": {
+    "comments": 85,
+    "avg_toxicity_before": 0.9912,
+    "avg_toxicity_after": 0.0621,
+    "share_below_30pct_after": 0.9882,
+    "avg_meaning_preserved": 0.9614,
+    "accepted_share": 0.9882
+  }
+}

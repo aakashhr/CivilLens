@@ -1,0 +1,119 @@
+{
+  "train_size": 3840,
+  "test_size": 960,
+  "binary_accuracy": 1.0,
+  "binary_f1": 1.0,
+  "category_accuracy": 1.0,
+  "category_macro_f1": 1.0,
+  "per_class": {
+    "none": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 480.0
+    },
+    "insult": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 96.0
+    },
+    "profanity": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 96.0
+    },
+    "harassment": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 96.0
+    },
+    "threat": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 96.0
+    },
+    "sarcasm": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 96.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 960.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 960.0
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "none",
+      "insult",
+      "profanity",
+      "harassment",
+      "threat",
+      "sarcasm"
+    ],
+    "matrix": [
+      [
+        480,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        96,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        96,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        96,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        96,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        96
+      ]
+    ]
+  }
+}
